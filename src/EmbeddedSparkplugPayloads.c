@@ -58,7 +58,7 @@ static bool _encode_to_stream_callback(pb_ostream_t *stream, const uint8_t *buf,
 }
 
 
-static bool _encode_payload(Payload* payload, BufferValue* buffer_ptr, StreamFunction* encodeFn) {
+static bool _encode_payload(Payload* payload, BufferValue* buffer_ptr, StreamFunction encodeFn) {
     // Encode to either user defined streaming function or to a buffer
     pb_ostream_t stream;
     if (buffer_ptr != NULL) {
